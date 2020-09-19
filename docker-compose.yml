@@ -1,0 +1,9 @@
+version: '3'
+services:
+  fluentd:
+    image: fluentd
+    command: -c /fluentd/etc/fluentd.conf -v
+    volumes:
+      - ./conf/fluentd:/fluentd/etc
+    ports:
+      - 24224:24224
